@@ -39,7 +39,7 @@ h1 {
 }
 
 h2 {
-	font-size: 1.8em;
+	font-size: 2.9em;
 	line-height: 1.4em;
 	margin: 0 0 .8em;
 }
@@ -103,12 +103,13 @@ a:hover {
 	position: relative;
 	top: -80px;
 	padding-top: 80px;
+	margin-bottom: -80px;
 }
 
 .is-sticky .navbar-default {
-	background: rgba(38, 175, 240, 0.95);
+	background: #001a33;
 	padding: 15px 0;
-	border-top: 1px solid #3DAFF6;
+	border-top: 1px solid #001a33;
 }
 
 #menu-sticky-wrapper {
@@ -129,9 +130,9 @@ a:hover {
 }
 
 .navbar-default {
-	background: rgb(38, 175, 240);
+	background: #001a33;
 	padding: 15px 0;
-	border-top: 1px solid #3DAFF6;
+	border-top: 1px solid #001a33;
 }
 
 .navbar-default .navbar-brand {
@@ -140,10 +141,15 @@ a:hover {
 	/* Fix vertical alignment by allowing container to grow */
 }
 
-/* Vertically align nav links to the logo on desktop */
+/* Vertically align all navbar items using flexbox */
 @media (min-width: 768px) {
+	.navbar-wrapper .container {
+		display: flex;
+		align-items: center;
+	}
 	.navbar-nav {
-		margin-top: 25px;
+		margin-top: 0;
+		margin-bottom: 0;
 	}
 }
 
@@ -243,8 +249,33 @@ a:hover {
 }
 
 .site-name img {
-	width: 150px;
-	height: 150px
+	width: 90px;
+	height: 90px;
+}
+
+.navbar-brand-right {
+	padding: 0px;
+	height: auto;
+	margin-left: auto;
+}
+
+.navbar-brand-right img {
+	width: 90px;
+	height: 90px;
+}
+
+@media (min-width: 768px) {
+	.collapse.navbar-collapse.navbar-themers {
+		display: flex !important;
+		align-items: center;
+		flex: 1;
+	}
+	.navbar-center {
+		flex: 1;
+		display: flex;
+		justify-content: center;
+		float: none;
+	}
 }
 
 .logo {
@@ -350,7 +381,14 @@ a:hover {
 }
 
 #features {
-	padding: 80px 0;
+	padding: 0 0 80px 0;
+}
+
+@media (min-width: 768px) {
+	.vm-row {
+		display: flex;
+		align-items: center;
+	}
 }
 
 #features .fa {
