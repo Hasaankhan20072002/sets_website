@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>UAPSC - Unmanned Aerial Platforms & Systems Centre</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- CSS Files -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="fonts/icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet" media="screen">
+	<link href="css/owl.theme.css" rel="stylesheet">
+	<link href="css/owl.carousel.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet" media="screen">
+
+	<!-- Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400,700' rel='stylesheet' type='text/css'>
+
+	<!-- Font Awesome -->
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<style>
+		/* Hero Video Section */
+		.hero-video-section {
+			position: relative;
+			width: 100%;
+			height: 100vh;
+			overflow: hidden;
+			top: -80px;
+			margin-bottom: -80px;
+		}
+
+		.hero-video-section video {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			min-width: 100%;
+			min-height: 100%;
+			width: auto;
+			height: auto;
+			transform: translate(-50%, -50%);
+			object-fit: cover;
+			z-index: 0;
+		}
+
+		.hero-video-overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 26, 51, 0.55);
+			z-index: 1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.hero-video-content {
+			text-align: center;
+			color: #fff;
+			z-index: 2;
+			padding: 0 20px;
+		}
+
+		.hero-video-content h1 {
+			font-size: 56px;
+			font-weight: 600;
+			color: #fff;
+			margin-bottom: 20px;
+			text-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+		}
+
+		.hero-video-content p {
+			font-size: 20px;
+			color: rgba(255, 255, 255, 0.9);
+			max-width: 700px;
+			margin: 0 auto;
+			line-height: 1.6;
+		}
+
+		.hero-video-content .btn-back {
+			display: inline-block;
+			margin-top: 30px;
+			padding: 12px 40px;
+			border: 2px solid #FAD12C;
+			color: #FAD12C;
+			font-size: 16px;
+			font-weight: 600;
+			border-radius: 100px;
+			text-decoration: none;
+			transition: all 0.4s;
+		}
+
+		.hero-video-content .btn-back:hover {
+			background: #FAD12C;
+			color: #001a33;
+		}
+
+		/* ===== Vision / Mission / Role Section ===== */
+		.vmr-section {
+			padding: 90px 0 70px;
+			background: #fff;
+		}
+
+		.vmr-section .section-title {
+			font-size: 40px;
+			font-weight: 300;
+			color: #202020;
+			margin-bottom: 10px;
+		}
+
+		.vmr-section .title-line {
+			width: 100px;
+			height: 3px;
+			background: #FAD12C;
+			margin: 0 auto 60px;
+		}
+
+		.vmr-card {
+			text-align: center;
+			padding: 30px 25px;
+			margin-bottom: 30px;
+			background: #f9f9f9;
+			border-radius: 8px;
+			border-top: 4px solid #001a33;
+			transition: all 0.4s;
+			min-height: 320px;
+		}
+
+		.vmr-card:hover {
+			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+			transform: translateY(-5px);
+		}
+
+		.vmr-card .vmr-icon {
+			width: 70px;
+			height: 70px;
+			margin: 0 auto 20px;
+		}
+
+		.vmr-card h3 {
+			font-size: 26px;
+			font-weight: 600;
+			color: #001a33;
+			margin-bottom: 15px;
+		}
+
+		.vmr-card p {
+			font-size: 15px;
+			line-height: 1.7;
+			color: #555;
+		}
+
+		/* ===== Role Section ===== */
+		.role-section {
+			padding: 80px 0;
+			background: #E6E6E6;
+		}
+
+		.role-section .role-img {
+			width: 100%;
+			border-radius: 8px;
+			box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+		}
+
+		.role-section h2 {
+			font-size: 40px;
+			font-weight: 300;
+			color: #202020;
+			margin-bottom: 25px;
+		}
+
+		.role-section p {
+			font-size: 15px;
+			line-height: 1.8;
+			color: #555;
+		}
+
+		/* ===== Tasks Section ===== */
+		.tasks-header {
+			padding: 80px 0 50px;
+			background: #001a33;
+			color: #fff;
+			text-align: center;
+		}
+
+		.tasks-header h2 {
+			font-size: 40px;
+			font-weight: 300;
+			color: #fff;
+			margin-bottom: 10px;
+		}
+
+		.tasks-header p {
+			font-size: 17px;
+			color: rgba(255,255,255,0.7);
+			max-width: 700px;
+			margin: 0 auto;
+		}
+
+		.tasks-header .title-line {
+			background: #FAD12C;
+			margin: 0 auto 25px;
+		}
+
+		/* Task cards - alternating layout */
+		.task-block {
+			padding: 70px 0;
+			border-bottom: 1px solid #e9e9e9;
+		}
+
+		.task-block:last-child {
+			border-bottom: none;
+		}
+
+		.task-block-even {
+			background: #f6f6f6;
+		}
+
+		.task-block-odd {
+			background: #fff;
+		}
+
+		.task-number {
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			background: #001a33;
+			color: #FAD12C;
+			font-size: 22px;
+			font-weight: 700;
+			border-radius: 50%;
+			margin-bottom: 15px;
+		}
+
+		.task-block h3 {
+			font-size: 24px;
+			font-weight: 600;
+			color: #001a33;
+			margin-bottom: 20px;
+			line-height: 1.3;
+		}
+
+		.task-block ul {
+			padding-left: 20px;
+			margin: 0;
+		}
+
+		.task-block ul li {
+			font-size: 15px;
+			line-height: 1.8;
+			color: #555;
+			margin-bottom: 8px;
+		}
+
+		.task-img {
+			width: 100%;
+			border-radius: 8px;
+			box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+			margin-top: 10px;
+		}
+
+		/* Vertical centering for task rows */
+		@media (min-width: 992px) {
+			.task-row {
+				display: flex;
+				align-items: center;
+			}
+		}
+
+		@media (max-width: 767px) {
+			.hero-video-content h1 {
+				font-size: 32px;
+			}
+			.hero-video-content p {
+				font-size: 16px;
+			}
+			.vmr-section .section-title,
+			.role-section h2,
+			.tasks-header h2 {
+				font-size: 30px;
+			}
+			.task-img {
+				margin-bottom: 30px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="top"></div>
+	<!-- NAVIGATION -->
+	<div id="menu">
+		<nav class="navbar-wrapper navbar-default" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-themers">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand site-name" href="index.html"><img src="images/logo.png" alt="logo"></a>
+				</div>
+
+				<div id="navbar-scroll" class="collapse navbar-collapse navbar-themers">
+					<ul class="nav navbar-nav navbar-center">
+						<li><a href="index.html#top">Intro</a></li>
+						<li><a href="index.html#vm">Vision / Mission</a></li>
+						<li><a href="index.html#trl">TRLs</a></li>
+						<li class="dropdown">
+							<a href="" class="dropdown-toggle" data-toggle="dropdown">ARICs <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="uapsc.html">Unmanned Aerial Platforms & Systems Centre</a></li>
+								<li><a href="index.html#arics">Advanced Research Centre for Super & Hypersonics</a></li>
+								<li><a href="index.html#arics">Digital Signal Processing & Waveforms Research Centre</a></li>
+								<li><a href="index.html#arics">Centre for Adaptive & Resilient Networking Technologies Research</a></li>
+								<li><a href="index.html#arics">Centre for RF Front-End, MIMO & Hybrid Beamforming Research</a></li>
+								<li><a href="index.html#arics">Centre for Cyber & Digital Infrastructure Security Research</a></li>
+								<li><a href="index.html#arics">Centre of Research for Optronics</a></li>
+								<li><a href="index.html#arics">Quantum Technologies Research Centre</a></li>
+								<li><a href="index.html#arics">Advanced Space Technologies Research Centre</a></li>
+								<li><a href="index.html#arics">Centre for Research & Innovation in Edge AI</a></li>
+							</ul>
+						</li>
+						<li><a href="index.html#clients">Academia Partners</a></li>
+						<li><a href="index.html#Industry">Industry Partners</a></li>
+						<li><a href="index.html#screenshot">Highlights</a></li>
+						<li><a href="index.html#contact">Contact us</a></li>
+					</ul>
+					<a class="navbar-brand-right" href="index.html"><img src="images/Air University.png" alt="logo"></a>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+	<!-- HERO VIDEO SECTION -->
+	<div class="hero-video-section">
+		<video autoplay muted loop playsinline id="heroVideo">
+			<source src="images/001.mp4" type="video/mp4">
+		</video>
+		<div class="hero-video-overlay">
+			<div class="hero-video-content">
+				<h1 class="wow fadeInDown">Unmanned Aerial Platforms & Systems Centre</h1>
+				<p class="wow fadeInUp" data-wow-delay="0.3s">"Advancing Autonomy, Resilience, and Mission Effectiveness in Unmanned Systems"</p>
+				<a href="index.html" class="btn-back wow fadeInUp" data-wow-delay="0.6s">Back to SETS</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- VISION / MISSION SECTION -->
+	<section class="vmr-section">
+		<div class="container">
+			<div class="text-center">
+				<h2 class="section-title wow fadeInLeft">Vision & Mission</h2>
+				<div class="title-line wow fadeInRight"></div>
+			</div>
+			<div class="row">
+
+				<!-- Vision Card -->
+				<div class="col-md-6 col-sm-6 wow fadeInLeft">
+					<div class="vmr-card">
+						<img src="images/vision.png" alt="Vision" class="vmr-icon">
+						<h3>Vision</h3>
+						<p>To lead the innovation of autonomous and resilient unmanned aerial platforms that transform defence, security, and civilian missions worldwide.</p>
+					</div>
+				</div>
+
+				<!-- Mission Card -->
+				<div class="col-md-6 col-sm-6 wow fadeInRight">
+					<div class="vmr-card">
+						<img src="images/mission.png" alt="Mission" class="vmr-icon">
+						<h3>Mission</h3>
+						<p>To research, prototype, and demonstrate advanced unmanned aerial platforms and systems that combine autonomy, survivability, and mission adaptability across diverse operational domains.</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- ROLE SECTION -->
+	<section class="role-section">
+		<div class="container">
+			<div class="row task-row">
+				<div class="col-md-6 wow fadeInLeft">
+					<img src="images/uapsc-role.png" alt="UAPSC Role" class="role-img">
+				</div>
+				<div class="col-md-6 wow fadeInRight">
+					<h2>Our Role</h2>
+					<p>The Unmanned Aerial Platforms & Systems Centre (UAPSC) serves as the national hub for research, innovation, and system-level integration of unmanned aerial platforms, ranging from micro-UAS to long-endurance, high-altitude systems.</p>
+					<p>It leads the design, prototyping, testing, autonomy development, communications integration, and mission-specific payload engineering of unmanned platforms for defence, disaster response, environmental monitoring, logistics, and emerging commercial applications.</p>
+					<p>The Centre works in close collaboration with super & hypersonics, communications, cybersecurity, and AI Centres to enable next-generation autonomous, resilient, and mission-configurable UAV ecosystems.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CORE TASKS HEADER -->
+	<section class="tasks-header">
+		<div class="container">
+			<h2 class="wow fadeInLeft">Core Tasks</h2>
+			<div class="title-line wow fadeInRight"></div>
+			<p class="wow fadeInUp">Specialized research and development areas driving UAPSC's mission forward</p>
+		</div>
+	</section>
+
+	<!-- TASK 1 -->
+	<section class="task-block task-block-odd">
+		<div class="container">
+			<div class="row task-row">
+				<div class="col-md-6 wow fadeInLeft">
+					<img src="images/uapsc-task1.png" alt="Platform Design" class="task-img">
+				</div>
+				<div class="col-md-6 wow fadeInRight">
+					<span class="task-number">1</span>
+					<h3>Platform Design, Aerostructures & Airframe Development</h3>
+					<ul>
+						<li>Develop novel airframe architectures (fixed-wing, rotary-wing, hybrid VTOL, HALE, MALE, micro-UAVs).</li>
+						<li>Perform aerodynamic modeling, CFD analysis, loads analysis, and structural optimization.</li>
+						<li>Research lightweight materials, composites, and modular, reconfigurable structures.</li>
+						<li>Collaborate with super & hypersonics for propulsion compatibility and high-speed envelope considerations.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- TASK 2 -->
+	<section class="task-block task-block-even">
+		<div class="container">
+			<div class="row task-row">
+				<div class="col-md-6 col-md-push-6 wow fadeInRight">
+					<img src="images/uapsc-task2.png" alt="Propulsion" class="task-img">
+				</div>
+				<div class="col-md-6 col-md-pull-6 wow fadeInLeft">
+					<span class="task-number">2</span>
+					<h3>Propulsion System Integration</h3>
+					<ul>
+						<li>Integrate electric, hybrid, internal combustion, battery, hydrogen, and solar propulsion systems.</li>
+						<li>Conduct performance modeling, endurance optimization, and efficiency enhancement studies.</li>
+						<li>Support research on distributed propulsion and propeller-motor system optimization.</li>
+						<li>Coordinate with super & hypersonics for small turbojet, turbofan, or pulse engines depending on mission needs.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- TASK 3 -->
+	<section class="task-block task-block-odd">
+		<div class="container">
+			<div class="row task-row">
+				<div class="col-md-6 wow fadeInLeft">
+					<img src="images/uapsc-task3.png" alt="Autonomy & Navigation" class="task-img">
+				</div>
+				<div class="col-md-6 wow fadeInRight">
+					<span class="task-number">3</span>
+					<h3>Autonomy, Navigation & Control</h3>
+					<ul>
+						<li>Develop advanced flight control laws, stability augmentation, and fault-tolerant control strategies.</li>
+						<li>Innovate autonomous mission planning, cooperative flight, swarm intelligence, and multi-agent coordination.</li>
+						<li>Integrate DRL-based adaptive navigation, perception-driven obstacle avoidance, and reinforced decision-making models.</li>
+						<li>Work with AI & autonomy specialists to build human-on-the-loop and fully autonomous system variants.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- TASK 4 -->
+	<section class="task-block task-block-even">
+		<div class="container">
+			<div class="row task-row">
+				<div class="col-md-6 col-md-push-6 wow fadeInRight">
+					<img src="images/uapsc-task4.png" alt="C3DL" class="task-img">
+				</div>
+				<div class="col-md-6 col-md-pull-6 wow fadeInLeft">
+					<span class="task-number">4</span>
+					<h3>Command, Control, Communications & Data Links (C3DL)</h3>
+					<ul>
+						<li>Design and integrate secure C2 links, telemetry, broadband uplink/downlink channels, and mesh networking.</li>
+						<li>Ensure resilience against jamming, spoofing, EMI/EMC challenges, and contested-spectrum operations.</li>
+						<li>Collaborate with CARNTR, DSPWRC & CCDISR on secure waveform development and protection strategies.</li>
+						<li>Support SATCOM integration and BLOS communication for long-endurance missions.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- TASK 5 -->
+	<section class="task-block task-block-odd">
+		<div class="container">
+			<div class="row task-row">
+				<div class="col-md-6 wow fadeInLeft">
+					<img src="images/uapsc-task5.png" alt="Sensor Payloads & ISR" class="task-img">
+				</div>
+				<div class="col-md-6 wow fadeInRight">
+					<span class="task-number">5</span>
+					<h3>Sensor Payloads, Mission Systems & ISR Capabilities</h3>
+					<ul>
+						<li>Develop modular payload systems for EO/IR, SAR, hyperspectral, LiDAR, SIGINT, ELINT, mapping & ISR missions.</li>
+						<li>Coordinate with CRMHBF for advanced radar and RF payload integration.</li>
+						<li>Research ultra-light, low-power, miniaturized sensor suites for micro-UAS.</li>
+						<li>Build universal payload interfaces for multi-mission adaptability.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- TASK 6 -->
+	<section class="task-block task-block-even">
+		<div class="container">
+			<div class="row task-row">
+				<div class="col-md-6 col-md-push-6 wow fadeInRight">
+					<img src="images/uapsc-task6.png" alt="Flight Testing" class="task-img">
+				</div>
+				<div class="col-md-6 col-md-pull-6 wow fadeInLeft">
+					<span class="task-number">6</span>
+					<h3>Flight Testing, Certification & Safety Frameworks</h3>
+					<ul>
+						<li>Establish full-spectrum UAV testing infrastructure (ground tests, range tests, endurance trials, wind tunnel inputs).</li>
+						<li>Develop certification pathways for airworthiness, redundancy, safety, and mission-readiness.</li>
+						<li>Maintain data acquisition systems for flight logging, performance analytics, and telemetry processing.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- TASK 7 -->
+	<section class="task-block task-block-odd">
+		<div class="container">
+			<div class="row task-row">
+				<div class="col-md-6 wow fadeInLeft">
+					<img src="images/uapsc-task7.png" alt="Swarm Systems" class="task-img">
+				</div>
+				<div class="col-md-6 wow fadeInRight">
+					<span class="task-number">7</span>
+					<h3>Swarm Systems & Multi-Platform Cooperative Operations</h3>
+					<ul>
+						<li>Create swarming algorithms for distributed sensing, cooperative ISR, and autonomous teaming.</li>
+						<li>Develop inter-UAV coordination schemes, task allocation, and real-time swarm formation control.</li>
+						<li>Research adversarial-resilient swarms under jamming, cyberattack, or degraded GPS environments.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- TASK 8 -->
+	<section class="task-block task-block-even">
+		<div class="container">
+			<div class="row task-row">
+				<div class="col-md-6 col-md-push-6 wow fadeInRight">
+					<img src="images/uapsc-task8.png" alt="AI & Computer Vision" class="task-img">
+				</div>
+				<div class="col-md-6 col-md-pull-6 wow fadeInLeft">
+					<span class="task-number">8</span>
+					<h3>Integration of AI, Computer Vision & Onboard Processing</h3>
+					<ul>
+						<li>Deploy edge-AI architectures using onboard GPU/TPU systems for real-time perception.</li>
+						<li>Innovate onboard threat detection, terrain mapping, collaborative sensing, and target recognition.</li>
+						<li>Cooperate with AI and simulation centres to build digital twins for mission rehearsal.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- TASK 9 -->
+	<section class="task-block task-block-odd">
+		<div class="container">
+			<div class="row task-row">
+				<div class="col-md-6 wow fadeInLeft">
+					<img src="images/uapsc-task9.png" alt="Civil Applications" class="task-img">
+				</div>
+				<div class="col-md-6 wow fadeInRight">
+					<span class="task-number">9</span>
+					<h3>Logistics, Disaster Response & Civil Applications</h3>
+					<ul>
+						<li>Develop specialized UAVs for precision agriculture, medical delivery, cargo transport, surveying, and emergency relief.</li>
+						<li>Build frameworks for regulatory compliance, BVLOS operations, and safety protocols.</li>
+						<li>Collaborate with national agencies for civil-military dual-use innovation.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- TASK 10 -->
+	<section class="task-block task-block-even">
+		<div class="container">
+			<div class="row task-row">
+				<div class="col-md-6 col-md-push-6 wow fadeInRight">
+					<img src="images/uapsc-task10.png" alt="Prototyping & Workforce" class="task-img">
+				</div>
+				<div class="col-md-6 col-md-pull-6 wow fadeInLeft">
+					<span class="task-number">10</span>
+					<h3>Prototyping & Technical Workforce Development</h3>
+					<ul>
+						<li>Establish rapid prototyping labs and composite fabrication facilities.</li>
+						<li>Train specialists in UAV design, flight operations, payload integration, maintenance, and mission planning.</li>
+						<li>Provide technical standards and manufacturing guidelines to national industries and startups.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- FOOTER -->
+	<footer id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4 text-left">
+					<img src="images/Air Universitypng" alt="" style="max-height:120px; margin-top:15px;">
+				</div>
+				<div class="col-sm-4 text-center">
+					<div class="social">
+						<ul>
+							<li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="https://plus.google.com/"><i class="fa fa-google-plus"></i></a></li>
+							<li><a href="https://instagram.com/"><i class="fa fa-instagram"></i></a></li>
+						</ul>
+					</div>
+					<div style="font-size:14px;">
+						&copy; Copyright Reserved by <a href="#">SETS Team</a>
+					</div>
+				</div>
+				<div class="col-sm-4 text-right">
+					<img src="images/NASTP.png" alt="NASTP" style="max-height:120px; margin-top:15px;">
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- JavaScript Files -->
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/jquery.sticky.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script>
+		new WOW().init();
+		document.getElementById('heroVideo').playbackRate = 0.5;
+	</script>
+</body>
+
+</html>
