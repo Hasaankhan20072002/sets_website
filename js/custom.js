@@ -20,8 +20,9 @@
 ----------------------------------------------*/
 $('body').scrollspy({ target: '#navbar-scroll' })
 
-// Closes the Responsive Menu on Menu Item Click
-$('.navbar-collapse ul li a').click(function() {
+// Closes the Responsive Menu on Menu Item Click (but not dropdown toggles)
+$('.navbar-collapse ul li a').click(function(e) {
+    if ($(this).hasClass('dropdown-toggle')) return;
     $('.navbar-toggle:visible').click();
 });
 
