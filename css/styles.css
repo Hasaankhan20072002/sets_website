@@ -170,6 +170,37 @@ a:hover {
 	color: #FAD12C;
 }
 
+.navbar-default .navbar-nav .dropdown-menu {
+	background: #001a33;
+	border: 1px solid rgba(255,255,255,0.08);
+	min-width: 400px;
+	padding: 10px 0;
+	border-radius: 6px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+	margin-top: 5px;
+}
+
+.navbar-default .navbar-nav .dropdown-menu>li>a {
+	color: rgba(255,255,255,0.85);
+	padding: 11px 20px 11px 18px;
+	font-size: 13.5px;
+	white-space: normal;
+	line-height: 1.5;
+	border-left: 3px solid transparent;
+	transition: all 0.3s ease;
+}
+
+.navbar-default .navbar-nav .dropdown-menu>li>a:hover {
+	background: rgba(255,255,255,0.07);
+	color: #FAD12C;
+	border-left: 3px solid #FAD12C;
+	padding-left: 22px;
+}
+
+.navbar-default .navbar-nav .dropdown-menu>li+li>a {
+	border-top: 1px solid rgba(255,255,255,0.06);
+}
+
 .navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.active>a:focus {
@@ -716,6 +747,11 @@ a:hover {
    INDUSTRY PARTNERS
    Center-aligned version
 ========================= */
+
+#clientsIndustry {
+	padding: 100px 0 100px;
+	background-color: #E6E6E6;
+}
 
 #clientIndustry {
 	background: #f6f6f6;
