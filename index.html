@@ -18,6 +18,66 @@
 
 	<link href="css/styles.css" rel="stylesheet" media="screen">
 
+	<style>
+		@keyframes spin360 {
+			from { transform: rotate(0deg); }
+			to   { transform: rotate(360deg); }
+		}
+		.sets-wheel-spin {
+			animation: spin360 18s linear infinite;
+			transform-origin: center center;
+			display: block;
+			margin: 0 auto;
+		}
+
+		/* Hero Video - Index */
+		.hero-index-section {
+			position: relative;
+			width: 100%;
+			height: 100vh;
+			overflow: hidden;
+			top: -80px;
+			margin-bottom: -80px;
+		}
+
+		.hero-index-section video {
+			position: absolute;
+			top: 42%;
+			left: calc(50% - 3px);
+			min-width: 100%;
+			min-height: 100%;
+			width: auto;
+			height: auto;
+			transform: translate(-50%, -50%);
+			object-fit: cover;
+			z-index: 0;
+		}
+
+		.hero-index-overlay {
+			position: relative;
+			z-index: 1;
+			background-color: transparent;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			min-height: 100vh;
+			padding: 120px 0 60px;
+		}
+
+		.hero-index-overlay h1 {
+			font-size: 56px;
+			font-weight: 600;
+			color: #0d2b4d;
+			margin: 25px 0 25px 0;
+			text-shadow: 0 1px 2px rgba(0,0,0,.4);
+		}
+
+		.hero-index-overlay .landing-text p {
+			color: #0d2b4d;
+		}
+	</style>
+
 	<!-- Google Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400,700' rel='stylesheet' type='text/css'>
@@ -76,45 +136,12 @@
 		</nav>
 	</div>
 
-	<!-- /.parallax full screen background image -->
-	<div class="fullscreen landing parallax banner" style="background-image:url('images/bg.jpg');" data-img-width="2000"
-		data-img-height="1325" data-diff="100">
-
-		<div class="overlay">
-			<div class="container">
-				<div class="row">
-
-
-
-					<div class="col-md-6">
-
-						<!-- /.main title -->
-						<h1 class="wow fadeInLeft">
-							School of Emerging Technologies & Systems
-						</h1>
-
-						<!-- /.header paragraph -->
-						<div class="landing-text wow fadeInLeft">
-							<p>SETS is a national research institution focused on generating knowledge and delivering innovative solutions in
-critical technology areas such as defence, aerospace, information security, AI, quantum tech, and space. Positioned
-at the intersection of science, engineering, and national security, it addresses high-impact, mission-driven
-challenges.<br>Unlike traditional teaching universities, SETS is dedicated to applied research, rapid prototyping, and translational development in technologies of national importance. Its network of specialized Advanced Research & Innovation Centers (ARIC) supports interdisciplinary collaboration to nurture innovation leadership, build enduring scientific capacity, and ensure national technological self-reliance.
-</p>
-						</div>
-
-					</div>
-
-					<!-- /.phone image -->
-					<div class="col-md-6">
-						<img src="images/header-phone.png" alt="phone"
-							class="header-phone img-responsive wow fadeInRight">
-					</div>
-
-				</div>
-						
-			</div>
-		</div>
-
+	<!-- /.hero video section -->
+	<div class="hero-index-section">
+		<video autoplay muted loop playsinline id="indexHeroVideo">
+			<source src="images/002.mp4" type="video/mp4">
+		</video>
+		<div class="hero-index-overlay"></div>
 	</div>
 					<section id="vm"></section>	
 <div class="container">
@@ -859,6 +886,7 @@ challenges.<br>Unlike traditional teaching universities, SETS is dedicated to ap
 	</script>
 	<script>
 		new WOW().init();
+		document.getElementById('indexHeroVideo').playbackRate = 0.5;
 	</script>
 </body>
 
